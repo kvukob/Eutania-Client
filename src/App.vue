@@ -1,30 +1,42 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <v-app>
+    <!-- Sizes your content based upon application components -->
+    <v-main>
+      <!-- Provides the application the proper gutter -->
+      <v-container fluid class="pa-0">
+        <!-- If using vue-router -->
+        <router-view></router-view>
+      </v-container>
+    </v-main>
+    <v-footer
+      border
+      style="position: fixed; bottom: 0; right: 0"
+      class="pa-0 d-flex align-center"
+    >
+      <v-card border class="text-secondary text-overline ma-0 pl-2 pr-2">
+        <v-row class="align-center">
+          <p>&copy;</p>
+          2022 Eutania
+        </v-row>
+      </v-card>
+    </v-footer>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import { defineComponent } from "vue";
 
-nav {
-  padding: 30px;
+export default defineComponent({
+  name: "App",
+  components: {},
+  data() {
+    return {
+      //
+    };
+  },
+});
+</script>
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<style>
+@import "styles.css";
 </style>

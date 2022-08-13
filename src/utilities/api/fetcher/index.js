@@ -4,9 +4,11 @@ import { useAccountStore } from "@/stores/accountStore";
 
 //  Azure URL (use when deployed)
 
-const SERVERURL = `https://eutania.azurewebsites.net/api/`;
+//const SERVERURL = `https://eutania.azurewebsites.net/api/`;
 
 //
+
+const SERVERURL = `/api/`;
 
 const getData = async function (apiCall) {
   let payload = {};

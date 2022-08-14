@@ -38,20 +38,13 @@ const socket = new HubConnectionBuilder()
   .build();
 */
 
-const socket = new HubConnectionBuilder()
-  .withUrl("/api/", {
-    accessTokenFactory: () => useAccountStore().getToken,
-  })
-  .build();
-/* Azure socket (use when deployed)
+// Azure socket (use when deployed)
 
 const socket = new HubConnectionBuilder()
   .withUrl("https://eutania.azurewebsites.net/gamehub", {
     accessTokenFactory: () => useAccountStore().getToken,
   })
   .build();
-
-*/
 
 // On close
 socket.onclose(async () => {

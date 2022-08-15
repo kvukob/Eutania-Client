@@ -17,4 +17,4 @@ app.get(/.*/, function (req, res) {
 });
 app.listen(port);
 
-console.log("started");
+console.log("startedok");

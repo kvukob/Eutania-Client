@@ -9,7 +9,7 @@
     </v-avatar>
     <div>
       {{ quantity }}
-      <span v-if="false" class="text-caption ml-1">EUA</span>
+      <span v-if="false" class="text-overline ml-1">EUA</span>
     </div>
   </v-chip>
 </template>

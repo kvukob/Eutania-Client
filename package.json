@@ -8,15 +8,17 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express":"*",
     "@mdi/font": "5.9.55",
     "@microsoft/signalr": "^6.0.7",
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
     "core-js": "^3.8.3",
     "cors": "^2.8.5",
     "i": "^0.3.7",
     "mdi-icons": "^1.0.1",
     "moment": "^2.29.4",
     "mosha-vue-toastify": "^1.0.23",
+    "multer": "^1.4.5-lts.1",
     "npm": "^8.15.1",
     "pinia": "^2.0.17",
     "roboto-fontface": "*",

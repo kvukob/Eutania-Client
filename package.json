@@ -11,6 +11,7 @@
     "@mdi/font": "5.9.55",
     "@microsoft/signalr": "^6.0.7",
     "core-js": "^3.8.3",
+    "cors": "^2.8.5",
     "i": "^0.3.7",
     "mdi-icons": "^1.0.1",
     "moment": "^2.29.4",

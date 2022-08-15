@@ -29,19 +29,13 @@ const popToast = function (isSuccess: boolean, message: string) {
 // API Version
 const VERSION = "V1";
 
+const LOCAL_URL = "https://localhost:7102/gamehub";
+//const DEPLOYED_URL = "/gamehub";
+//const AZURE_URL = "https://eutania.azurewebsites.net/gamehub";
+
 // Socket
-/*
 const socket = new HubConnectionBuilder()
-  .withUrl("https://localhost:7102/gamehub", {
-    accessTokenFactory: () => useAccountStore().getToken,
-  })
-  .build();
-*/
-
-// Azure socket (use when deployed)
-
-const socket = new HubConnectionBuilder()
-  .withUrl("https://eutania.azurewebsites.net/gamehub", {
+  .withUrl(LOCAL_URL, {
     accessTokenFactory: () => useAccountStore().getToken,
   })
   .build();

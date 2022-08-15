@@ -16,6 +16,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../views/public/AuthView.vue"),
   },
   {
+    path: "/staging",
+    name: "staging",
+    component: () => import("../views/public/StagingView.vue"),
+  },
+  {
     path: "/verify-email/:code?",
     name: "verify.email",
     component: () => import("../views/public/VerifyEmailView.vue"),

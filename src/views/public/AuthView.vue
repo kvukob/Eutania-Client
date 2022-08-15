@@ -1,5 +1,6 @@
 <template>
   <div
+    :style="cssProps"
     style="
       display: flex;
       align-items: center;
@@ -7,6 +8,11 @@
       height: 100vh;
     "
   >
+    <v-img
+      :src="require('@/assets/img/spacecraft/spacecraft_right.png')"
+      style="width: 80%; height: 80%; position: fixed; bottom: 0; right: 10%"
+    >
+    </v-img>
     <v-row class="justify-center">
       <v-col sm="6" md="4" lg="3">
         <div>
@@ -24,19 +30,21 @@
     </v-row>
   </div>
 </template>
-
 <script>
 import CreateAccountCard from "@/core/auth/CreateAccountCard";
 import LoginCard from "@/core/auth/LoginCard";
 export default {
   name: "AuthView",
   components: { LoginCard, CreateAccountCard },
-  data() {
-    return {
-      showLoginForm: true,
-      showRegisterForm: false,
-    };
-  },
+  data: () => ({
+    showLoginForm: true,
+    showRegisterForm: false,
+    cssProps: {
+      backgroundImage: `url(${require("@/assets/img/backgrounds/main.png")})`,
+      height: `calc(100vh - 48px)`,
+      backgroundSize: `cover`,
+    },
+  }),
   methods: {
     showCreateAccount: async function () {
       this.showLoginForm = !this.showLoginForm;

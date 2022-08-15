@@ -15,17 +15,17 @@
               {{ mission.missionCode }}
             </v-chip>
           </v-card-title>
-          <v-card-subtitle class="text-wrap">
+          <v-card-text>
             <div style="height: 50px" class="overflow-y-auto">
               {{ mission.description }}
             </div>
-          </v-card-subtitle>
+          </v-card-text>
         </v-card>
       </v-col>
       <v-col md="12">
         <v-card border class="ma-5">
           <v-card-text class="text-overline text-secondary">
-            Mission Requirements
+            Requirements
           </v-card-text>
           <v-card-text>
             <div style="height: 100px" class="overflow-y-auto">
@@ -53,7 +53,7 @@
             {{ mission.maxCompletions }}
           </v-card-text>
           <v-card-text>
-            <span class="text-secondary">Fulfillment Reward</span>
+            <span class="text-secondary">Reward</span>
             <v-spacer />
             <EuaQuantity :quantity="mission.reward" />
           </v-card-text>
@@ -67,7 +67,7 @@
               v-if="!hasMetRequirements(mission)"
               color="error"
             >
-              Mission Requirements Not Met
+              Requirements Not Met
             </v-alert>
             <v-btn
               v-if="hasMetRequirements(mission)"

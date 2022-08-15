@@ -1,63 +1,69 @@
 <template>
-  <div>
-    <v-row class="justify-center">
-      <v-card-title class="text-center text-h2"> Eutania </v-card-title>
+  <div :style="cssProps">
+    <v-img
+      :src="require('@/assets/img/planets/eutania.png')"
+      style="width: 90%; height: 90%; position: fixed; bottom: -50%; right: 5%"
+    >
+    </v-img>
+    <v-row class="justify-center text-center">
+      <v-col cols="12" sm="6" md="2">
+        <v-card color="transparent" class="d-flex flex-column align-center">
+          <v-card
+            variant="plain"
+            color="transparent"
+            min-width="60px"
+            min-height="60px"
+          >
+            <v-icon size="60" color="primary">mdi-pickaxe</v-icon>
+          </v-card>
+          <v-card-text>
+            Mine on planets to earn resources and rewards
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="6" md="2">
+        <v-card color="transparent" class="d-flex flex-column align-center">
+          <v-card
+            variant="plain"
+            color="transparent"
+            min-width="60px"
+            min-height="60px"
+          >
+            <v-img
+              min-width="60px"
+              min-height="60px"
+              :src="require('@/assets/img/icons/eua.svg')"
+            />
+          </v-card>
+          <v-card-text>
+            Earn EUA, which is the in-game currency used to buy upgrades,
+            spacecraft, and more
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="6" md="2">
+        <v-card color="transparent" class="d-flex flex-column align-center">
+          <v-card
+            variant="plain"
+            color="transparent"
+            width="60px"
+            height="60px"
+          >
+            <v-img
+              width="60px"
+              height="60px"
+              :src="require('@/assets/img/icons/market.svg')"
+            />
+          </v-card>
+          <v-card-text>
+            Participate in an entirely player run market
+          </v-card-text>
+        </v-card>
+      </v-col>
     </v-row>
     <v-row class="justify-center">
       <v-col cols="12" sm="6" md="4">
-        <v-card
-          border
-          class="pa-5 d-flex flex-column justify-center"
-          height="100%"
-        >
-          <v-card color="transparent" class="pa-5" height="100%">
-            <v-card-text class="d-flex flex-column text-overline text-center">
-              <v-card color="transparent" class="d-flex align-center">
-                <v-icon size="50" color="primary">mdi-pickaxe</v-icon>
-                Mine on planets to earn resources and rewards
-              </v-card>
-              <v-divider class="ma-5" />
-              <v-card color="transparent" class="d-flex align-center">
-                Earn EUA, which is the in-game currency used to buy upgrades,
-                spacecraft, and more
-
-                <v-card color="transparent" min-width="60px" min-height="60px">
-                  <v-img
-                    min-width="60px"
-                    min-height="60px"
-                    :src="require('@/assets/img/icons/eua.svg')"
-                  />
-                </v-card>
-              </v-card>
-              <v-divider class="ma-5" />
-              <v-card color="transparent" class="d-flex align-center">
-                <v-card color="transparent" width="60px" height="60px">
-                  <v-img
-                    width="60px"
-                    height="60px"
-                    :src="require('@/assets/img/icons/market.svg')"
-                  />
-                </v-card>
-                Participate in an entirely player run market
-              </v-card>
-            </v-card-text>
-          </v-card>
-        </v-card>
-      </v-col>
-      <v-col cols="12" sm="6" md="4">
         <v-card height="100%" class="pa-5 d-flex flex-column justify-center">
-          <v-alert
-            class="justify-center"
-            color="success"
-            elevation="12"
-            max-height="20%"
-          >
-            <v-alert-title class="text-overline">
-              Alpha is currently open
-            </v-alert-title>
-          </v-alert>
-          <v-divider class="ma-5" />
-          <v-card-title class="text-center"> Ready to explore? </v-card-title>
           <v-card-actions class="justify-center">
             <v-btn
               block=""
@@ -87,12 +93,12 @@ export default defineComponent({
   components: {},
 
   data: () => ({
-    image: 1,
+    cssProps: {
+      backgroundImage: `url(${require("@/assets/img/backgrounds/main.png")})`,
+      height: `calc(100vh - 48px)`,
+      backgroundSize: `cover`,
+    },
   }),
-
-  beforeMount() {
-    this.image = Math.floor(Math.random() * (2 + 1) + 1);
-  },
 
   methods: {},
 });

@@ -6,7 +6,7 @@
           <v-img
             cover=""
             height="250px"
-            :src="require('@/assets/img/icons/harvester.png')"
+            :src="require('@/assets/img/harvester/harvester.png')"
           />
         </v-card>
         <v-card v-if="isHarvesterUnassigned" border>

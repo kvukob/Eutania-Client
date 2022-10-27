@@ -8,10 +8,8 @@ Technologies Used in Server
 -> C#, .NET, SingalR, MYSQL
 
   
-*******  
-This public version of Eutania is missing some core code which is required to run.  This version is meant to show off some of Eutania's code base.  
-  
-In order to see a live version of Eutania, visit https://eutania.azurewebsites.net/.  From there, you can create an account to  
+*******   
+In order to see a live version of Eutania, visit https://eutania.azurewebsites.net/.  From there, you can create an account to 
 start from scratch, or follow the directions on the login screen to get an idea of things during the "playing" state.  
 *******  
   

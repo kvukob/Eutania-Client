@@ -1,5 +1,12 @@
 # Eutania-Client 
 Public version of Eutania's client to show off some of its codebase  
+
+Technologies Used in Client
+-> Javascript, Typescript, VueJS 3, Vuetify, CSS
+
+Technologies Used in Server
+-> C#, .NET, SingalR, MYSQL
+
   
 *******  
 This public version of Eutania is missing some core code which is required to run.  This version is meant to show off some of Eutania's code base.  
